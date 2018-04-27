@@ -32,8 +32,9 @@ html{
 }
 
 .night {
-  background: #2a3744;
+  background: black;
   color: grey;
+  background: linear-gradient(180deg, black 0%, grey 100%);
 }
 
 .night:after {
