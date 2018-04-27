@@ -9,19 +9,21 @@
 // Both parameters must be in quotes.
 
 // toggleClass('.myClass', 'class-to-toggle')
-var now=new Date()
-console.log(now)
+function timeClass(){
+  var now=new Date()
+  console.log(now)
 
-var hours=now.getHours()
-console.log(hours)
+  var hours=now.getHours()
+  console.log(hours)
 
-if(hours >=6 && hours <12){
-  console.log("morning")
-  document.body.classList.add('morning')
-}else if(hours >=12 && hours <=17){
-  console.log("afternoon")
-  document.body.classList.add('afternoon')
-}else{
-  console.log("night")
-  document.body.classList.add('night')
-  }
+  if(hours >=6 && hours <12){
+    console.log("morning")
+    document.body.classList.add('morning')
+  }else if(hours >=12 && hours <=17){
+    console.log("afternoon")
+    document.body.classList.add('afternoon')
+  }else{
+    console.log("night")
+    document.body.classList.add('night')
+    }
+}

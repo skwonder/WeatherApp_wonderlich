@@ -12,10 +12,25 @@
     <link rel="stylesheet" href="/css/main.css">
   </head>
 
-  <body>
-    <div class="sans-serif">
-
-      <!-- If there is an error, this box is shown. 'dn' is the only required class -->
+  <body class="calm evening">
+      <div class="sans-serif">
+        <div class="sun"></div>
+      </div>
+      <div class="raining">
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
+      </div>
+      <div id='clouds'>
+        <div class='cloud c1'></div>
+        <div class='cloud c2'></div>
+        <div class='cloud c3'></div>
+        <div class='cloud c4'></div>
+        <div class='cloud c5'></div>
+      </div>
+    <!-- If there is an error, this box is shown. 'dn' is the only required class -->
       <div id="error" class="dn bg-red white pa4 fixed bottom-0 w-100">
         Sorry, we couldn't find that city.
       </div>
@@ -26,7 +41,7 @@
           <span class="mr3 mb2">
             Weather for:
           </span>
-          <input type="text" id="area" value="Boston" class="flex-auto">
+          <input type="text" id="area" value="Boston" class="flex-auto br-pill bg-white-90 black-50">
         </h1>
       </form>
 
@@ -57,7 +72,8 @@
 
     <!-- Site JavaScript -->
     <script src="/javascript/toggleClass.js" charset="utf-8"></script>
-    <script src="/javascript/main.js" charset="utf-8"></script>
     <script src="/javascript/weather.js" charset="utf-8"></script>
+    <script src="/javascript/main.js" charset="utf-8"></script>
+
   </body>
 </html>
