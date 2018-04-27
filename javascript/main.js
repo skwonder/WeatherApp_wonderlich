@@ -9,21 +9,31 @@
 // Both parameters must be in quotes.
 
 // toggleClass('.myClass', 'class-to-toggle')
-function timeClass(){
-  var now=new Date()
-  console.log(now)
 
-  var hours=now.getHours()
-  console.log(hours)
+function startTime() {
+  var d = new Date();
+  var h = d.getHours();
+  var m = d.getMinutes();
+  m = checkTime(m);
+  document.getElementById('clock').innerHTML = h + ":" + m;
+  var t = setTimeout(function() {
+    startTime()
+  }, 500);
 
-  if(hours >=6 && hours <12){
-    console.log("morning")
-    document.body.classList.add('morning')
-  }else if(hours >=12 && hours <=17){
-    console.log("afternoon")
-    document.body.classList.add('afternoon')
-  }else{
-    console.log("night")
-    document.body.classList.add('night')
-    }
+  if (h < 11) document.getElementById("bgd").className = " morning";
+  else if (h < 16) document.getElementById("bgd").className = " day";
+  else if (h < 20) document.getElementById("bgd").className = " noon";
+  else if (h < 24) document.getElementById("bgd").className = " night",
+    document.getElementById("skydeco").style.display = "none";
+  else if (h < 6) document.getElementById("bgd").className = " night",
+    document.getElementById("skydeco").style.display = "none";
 }
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i
+  };
+  return i;
+}
+
+startTime()
