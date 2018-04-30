@@ -3,12 +3,14 @@
  * ======================================== */
 html{
   height: 100%;
-  margin: 0;
+  margin-left: 50px;
+  margin: 0px;
   padding: 0;
   overflow: hidden;
 }
 .TOP{
   top: 50%;
+  txt-align: center;
 }
 #bgd {
   height: 2000px;
@@ -19,8 +21,7 @@ html{
 #clock {
   margin: 0 auto;
   transform: translateY(50%);
-  color: #eee;
-  font-family: 'Open Sans Condensed', sans-serif;
+  color: #fff;
   font-size: 64px;
   font-weight: 700;
   line-height: 64px;
@@ -30,11 +31,43 @@ html{
   text-transform: uppercase;
   text-shadow: 2px 2px rgba(0,0,0,0.2);
 }
+.info{
+  margin: 0 auto;
+  /* transform: translateY(50%); */
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 0;
+  padding: 20px 30px;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0,0,0,0.2);
+}
+p{
+  font-size: 22px;
+  line-height: 16px;
+  margin-left: 55px;
+  padding: 10px 5px;
+  text-align: left;
+}
+.grow {
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
 
+.grow:hover,
+.grow:focus {
+  transform: scale(1.2);
+}
+
+.grow:active {
+  transform: scale(.90);
+}
 .night {
   background: black;
   color: grey;
-  background: linear-gradient(180deg, black 0%, grey 100%);
+  background: linear-gradient(180deg, black 0%, #040126 100%);
 }
 
 .night:after {
@@ -45,8 +78,8 @@ html{
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: #fff;
-  border: 5px solid #e3e3c7;
+  background: linear-gradient(100deg, #d1d3d4 10%, #fff 100%);
+  border: 2px solid #fff;
   -webkit-box-shadow: 0px 0px 218px 30px rgba(255,255,255,1);
 -moz-box-shadow: 0px 0px 218px 30px rgba(255,255,255,1);
 box-shadow: 0px 0px 218px 30px rgba(255,255,255,1);
@@ -71,7 +104,8 @@ box-shadow: 0px 0px 218px 30px rgba(255,255,255,1);
 .morning {
   background: #50caf4;
   color:#FFDB66;
-  background: linear-gradient(180deg, #50caf4 0%, #CCEEF9 100%);
+  text-shadow: 1.5px 1.5px rgba(0,0,0,0.2);
+  background: linear-gradient(180deg, #88c7ff 0%, #aee5e5 100%);
 }
 
 .morning:after,
@@ -94,12 +128,14 @@ box-shadow: 0px 0px 218px 30px rgba(255,223,109,1);
 .day {
   background-color:#7fa7d8;
   color: gold;
-  background: linear-gradient(180deg, #7fa7d8 0%, #CCEEF9 100%);
+  text-shadow: 1.5px 1.5px rgba(0,0,0,0.2);
+  background: linear-gradient(180deg,#5AD6F2 0%, #cceef9 100%);
 }
 
 .noon {
-  background: linear-gradient(180deg, #86C3D7 0%, #cceef9 100%);
-  color: orange;
+  background: linear-gradient(180deg, #7FA7D8 0%, #5AD6F2 100% );
+  color:#FFBF00;
+  text-shadow: 1.5px 1.5px rgba(0,0,0,0.2);
 }
 
 .noon:after {
@@ -133,7 +169,7 @@ box-shadow: 0px 0px 218px 30px #FFCD2B;
   -webkit-border-radius: 200px;
   position: relative;
   opacity: 0.8;
-  animation: cloudy 14s linear infinite;
+  animation: cloudy 20s linear infinite;
   animation-direction: alternate;
 }
 
@@ -173,7 +209,7 @@ box-shadow: 0px 0px 218px 30px #FFCD2B;
   position: relative;
   top: 100px;
   opacity: 0.6;
-  animation: cloudy 20s linear infinite;
+  animation: cloudy 40s linear infinite;
 }
 
 .cloud2:before,
@@ -213,7 +249,7 @@ box-shadow: 0px 0px 218px 30px #FFCD2B;
   top: 100px;
   right: 0px;
   opacity: 0.6;
-  animation: cloudy 10s linear infinite;
+  animation: cloudy 28s linear infinite;
   animation-direction: alternate;
 }
 
@@ -287,4 +323,19 @@ box-shadow: 0px 0px 218px 30px #FFCD2B;
   100% {
     left: -250px;
   }
+}
+#error{
+  animation: error 1.3s infinite;
+}
+
+@keyframes error{
+  0%, 50% {
+    background-color: dark-red;
+    border: 3px solid dark-red;
+    opacity: 0;
+}
+50%, 99% {
+    background-color: rgb(211,5,5,1);
+    border: 3px solid rgb(211,5,5,1);
+}
 }
